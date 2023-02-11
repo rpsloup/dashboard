@@ -1,6 +1,8 @@
 import DefaultLayout from '../layouts/DefaultLayout';
 import { useEndpoint } from '../hooks/fetchHooks';
 
+import type { DailyTask } from '../../../typings/dailyTaskTypes';
+
 const HomePage = (): JSX.Element => {
   const { data: dailyTasks } = useEndpoint('/daily');
 
@@ -9,7 +11,7 @@ const HomePage = (): JSX.Element => {
       <h1>Home</h1>
       <ul>
         {dailyTasks
-          ? (dailyTasks as any[]).map((task) => (
+          ? (dailyTasks as DailyTask[]).map((task) => (
               <li key={task.task_id}>
                 {task.title} ({task.time})
               </li>
