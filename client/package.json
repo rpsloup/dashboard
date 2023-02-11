@@ -10,6 +10,9 @@
     "lint": "eslint './src/**/*.ts' './src/**/*.tsx'"
   },
   "dependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
